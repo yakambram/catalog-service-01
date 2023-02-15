@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "2b011486-89c3-4623-aa43-ab6d0473ec20",
+		"name": "catalog-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2318157"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/v1/product/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"prod103\",\r\n    \"name\" : \"laptop3\",\r\n    \"description\" : \"new laptop\",\r\n    \"price\": 826481.53297\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/product/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"prod103\",\r\n    \"name\" : \"laptop3\",\r\n    \"description\" : \"new laptop\",\r\n    \"price\": 826481.53297\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/product/getProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"getProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product By id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"prod103\",\r\n    \"name\" : \"laptop3\",\r\n    \"description\" : \"new laptop\",\r\n    \"price\": 826481.53297\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/product/prod103",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"prod103"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"prod103\",\r\n    \"name\" : \"laptop3\",\r\n    \"description\" : \"new laptop\",\r\n    \"price\": 826481.53297\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/product/search?query=prod103",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "prod103"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
